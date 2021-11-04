@@ -1,0 +1,37 @@
+main {
+    width: 80%;
+    margin: 50px auto 80px;
+    font-family: sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form button {
+    line-height: 20px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 3px 0;
+}
+
+@media (min-width: 768px) {     /* visualizzazione desktop vs mobile */
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* divido gli elementi in una griglia da tre colonne */
+        column-gap: 10px;
+        row-gap: 5px;
+    }
+}
