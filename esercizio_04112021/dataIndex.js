@@ -3,7 +3,6 @@
  */
 const q = (selector) => document.querySelector(selector);
 
-
 const render = (container, items) => {
     const elements = items.map((element) =>
         `<li>
@@ -26,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const addName = q('#yourName');
     const addPhone = q('#yourPhone');
     const addEmail = q('#yourEmail');
+    const sortAZ = q('#az');
+    const sortZA = q('#za');
 
     render(list, data);
 
@@ -52,5 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         data.push(addContact);
         render(list, data);
+    });
+
+    az.addEventListener('click', (event) => {
+        const result = data.sort((a, b) => (a.name > b.name) ? 1 : -1)
+
+        render(list, result);
+    });
+
+    za.addEventListener('click', (event) => {
+        const result = data.sort((a, b) => (a.name < b.name) ? 1 : -1)
+
+        render(list, result);
     });
 });
