@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     az.addEventListener('click', (event) => {
-        const result = data.sort((a, b) => (a.name > b.name) ? 1 : -1)
+        const result = data.sort((a, b) => (a.name.toLowerCase > b.name.toLowerCase) ? 1 : -1)
 
         render(list, result);
     });
 
     za.addEventListener('click', (event) => {
-        const result = data.sort((a, b) => (a.name < b.name) ? 1 : -1)
+        const result = data.sort((a, b) => (a.name.toLowerCase < b.name.toLowerCase) ? 1 : -1)
 
         render(list, result);
     });
