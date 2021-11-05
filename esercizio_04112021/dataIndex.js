@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         data.push(addContact);
         render(list, data);
+
+        event.target.reset(); // resetta il form in cui l'utente inserisce i dati
     });
 
     az.addEventListener('click', (event) => {
